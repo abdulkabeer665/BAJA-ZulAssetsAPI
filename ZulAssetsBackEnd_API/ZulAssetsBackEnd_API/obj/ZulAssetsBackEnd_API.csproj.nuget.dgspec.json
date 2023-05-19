@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj": {}
+  },
+  "projects": {
+    "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
+        "projectName": "ZulAssetsBackEnd_API",
+        "projectPath": "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
+        "packagesPath": "C:\\Users\\abdul.kabeer\\.nuget\\packages\\",
+        "outputPath": "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\abdul.kabeer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.4.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZulAssetsBackEnd_API</name>
+    </assembly>
+    <members>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAllAssets">
+            <summary>
+            Get All Assets
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.AssetTrackingByID(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetTrackingRequest)">
+            <summary>
+            Asset Tracking API
+            </summary>
+            <param name="assetTrackingReq"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAssetsStatus">
+            <summary>
+            Get All Assets
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateAssetStatusByBarcode(ZulAssetsBackEnd_API.BAL.RequestParameters.UpdateAssetStatus)">
+            <summary>
+            Update Asset Status By Barcode
+            </summary>
+            <returns>Returns a message "Asset Status Updated"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.AnonymousAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.AnonymousAssetsRequests)">
+            <summary>
+            Anonymous Asset API
+            </summary>
+            <param name="anonymousAstReq"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAllAnonymousAssets">
+            <summary>
+            Asset Tracking API
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateAssetLocation(ZulAssetsBackEnd_API.BAL.RequestParameters.UpdateAssetLocation)">
+            <summary>
+            Update Asset Location
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.TransferFromBEToTemp(System.String)">
+            <summary>
+            Transfer Assets From BE To Temp
+            </summary>
+            <returns>Returns a DataSet with a message and status as well</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CategoryController.GetAllCategory">
+            <summary>
+            Get All Category API
+            </summary>
+            <returns>Returns a message ""</returns>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController">
+            <summary>
+            Device Controller
+            </summary>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.InitializeDevice(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Initialize Device API
+            </summary>
+            <param name="deviceReg"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.VerifyDeviceLicKey(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Verify Device License Key API
+            </summary>
+            <param name="deviceReg"></param>
+            <returns>Returns License Key</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.GenerateLicKey(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Generate License Key API
+            </summary>
+            <param name="deviceReg"></param>
+            <returns>Returns License Key</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.GetAllLocations">
+            <summary>
+            Get All Locations API
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.GetAssetsByLocationID(ZulAssetsBackEnd_API.BAL.RequestParameters.LocationRequest)">
+            <summary>
+            Get Location By ID API
+            </summary>
+            <returns>Returns a detail against Loc ID</returns>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Controllers.UserController">
+            <summary>
+            User Controller
+            </summary>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.Login(ZulAssetsBackEnd_API.BAL.RequestParameters.Loginparam)">
+            <summary>
+            Login API
+            </summary>
+            <param name="loginParam"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.RefreshToken(ZulAssetsBackEnd_API.BAL.RequestParameters.RefreshTokenRequest)">
+            <summary>
+            Refreshing Token when Last token is valid
+            </summary>
+            <param name="refreshTokenRequest"></param>
+            <returns></returns>
+            <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException"></exception>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.ChangePassword(ZulAssetsBackEnd_API.BAL.RequestParameters.ChangePassword)">
+            <summary>
+            Change Password API
+            </summary>
+            <param name="changePassword"></param>
+            <returns>Returns Success Message of Change Password</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.ForgetPassword(ZulAssetsBackEnd_API.BAL.RequestParameters.ForgotPassword)">
+            <summary>
+            Reset Password API
+            </summary>
+            <param name="loginParam"></param>
+            <returns>Will check if user exists? if yes then will send an email to admin regarding password change</returns>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Services.IMailService">
+            <summary>
+            Mail Service
+            </summary>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Services.IMailService.ForgetPasswordEmail(ZulAssetsBackEnd_API.Model.MailRequest)">
+            <summary>
+            Forget Password Email Function
+            </summary>
+            <param name="mailRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Settings.MailSettings">
+            <summary>
+            Mail Settings Parameters
+            </summary>
+        </member>
+    </members>
+</doc>
