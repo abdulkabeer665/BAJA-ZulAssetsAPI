@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj": {}
+    "F:\\Docs_Source Codes_SDKs\\JEDDAH\\Baaja\\API Project 2\\BAJA-ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj": {}
   },
   "projects": {
-    "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj": {
+    "F:\\Docs_Source Codes_SDKs\\JEDDAH\\Baaja\\API Project 2\\BAJA-ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
+        "projectUniqueName": "F:\\Docs_Source Codes_SDKs\\JEDDAH\\Baaja\\API Project 2\\BAJA-ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
         "projectName": "ZulAssetsBackEnd_API",
-        "projectPath": "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
+        "projectPath": "F:\\Docs_Source Codes_SDKs\\JEDDAH\\Baaja\\API Project 2\\BAJA-ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
         "packagesPath": "C:\\Users\\abdul.kabeer\\.nuget\\packages\\",
-        "outputPath": "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\obj\\",
+        "outputPath": "F:\\Docs_Source Codes_SDKs\\JEDDAH\\Baaja\\API Project 2\\BAJA-ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abdul.kabeer\\AppData\\Roaming\\NuGet\\NuGet.Config",

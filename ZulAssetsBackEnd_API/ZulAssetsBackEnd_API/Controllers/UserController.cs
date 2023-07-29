@@ -62,6 +62,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     if (dt.Columns.Contains("ErrorMessage"))
                     {
                         msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
                         return Ok(msg);
                     }
                     else
@@ -262,11 +263,13 @@ namespace ZulAssetsBackEnd_API.Controllers
                     if (dt.Columns.Contains("ErrorMessage"))
                     {
                         msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
                         return Ok(msg);
                     }
                     else
                     {
                         msg.message = dt.Rows[0]["Message"].ToString(); ;
+                        msg.status = "200";
                         return Ok(msg);
                     }
 
@@ -308,6 +311,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     if (dt.Columns.Contains("ErrorMessage"))
                     {
                         msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
                         return Ok(msg);
                     }
                     else
@@ -315,12 +319,14 @@ namespace ZulAssetsBackEnd_API.Controllers
                         if (dt.Rows[0]["Message"].ToString().Contains("Not"))
                         {
                             msg.message = dt.Rows[0]["Message"].ToString();
+                            msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
                             var _1 = new EmailController(_mailService).ForgetPasswordEmail(mailRequest);
                             msg.message = "Email Sent Successfully";
+                            msg.status = "200";
                             return Ok(msg);
                         }
                         

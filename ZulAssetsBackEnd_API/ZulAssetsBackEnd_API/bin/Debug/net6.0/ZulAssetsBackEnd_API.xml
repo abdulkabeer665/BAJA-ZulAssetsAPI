@@ -48,6 +48,46 @@
             </summary>
             <returns>Returns a message "Device is created"</returns>
         </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.TransferFromBEToTemp(System.String)">
+            <summary>
+            Transfer Assets From BE To Temp
+            </summary>
+            <returns>Returns a DataSet with a message and status as well</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.TransferFromBEToDeviceOffline(System.String)">
+            <summary>
+            Transfer Assets From BE To Temp
+            </summary>
+            <returns>Returns a DataSet with a message and status as well</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.ExportDataToBE(ZulAssetsBackEnd_API.BAL.RequestParameters.ExportAuditDataReqParam)">
+            <summary>
+            Export Audit Data to BETemp
+            </summary>
+            <param name="exportAuditDataReqParam"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.ExportDataToBEAnonymous(ZulAssetsBackEnd_API.BAL.RequestParameters.ExportAnonymousDataReqParam)">
+            <summary>
+            Export Anonymous Data to BETemp
+            </summary>
+            <param name="exportAnonymousDataReqParam"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.ExportDataToBEAnonymous(ZulAssetsBackEnd_API.BAL.RequestParameters.ExportAssetStatusDataReqParam)">
+            <summary>
+            Export Anonymous Data to BETemp
+            </summary>
+            <param name="exportAssetStatusDataReqParam"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.DeleteAsset(ZulAssetsBackEnd_API.BAL.RequestParameters.DelAst)">
+            <summary>
+            Delete Ast
+            </summary>
+            <param name="delAst"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
         <member name="M:ZulAssetsBackEnd_API.Controllers.CategoryController.GetAllCategory">
             <summary>
             Get All Category API
@@ -69,6 +109,13 @@
         <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.VerifyDeviceLicKey(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
             <summary>
             Verify Device License Key API
+            </summary>
+            <param name="deviceReg"></param>
+            <returns>Returns License Key</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.GenerateLicKey(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Generate License Key API
             </summary>
             <param name="deviceReg"></param>
             <returns>Returns License Key</returns>

@@ -41,6 +41,7 @@ namespace ZulAssetsBackEnd_API.Controllers
             {
                 await _mailService.ForgetPasswordEmail(mailRequest);
                 msg.message = "Email Sent Successfully!";
+                msg.status = "200";
                 return Ok(msg);
             }
             catch (Exception ex)

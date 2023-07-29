@@ -289,6 +289,93 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #endregion
 
+        #region Transfer Assets From BE To Temp
+
+        public static DataSet TransferAssetsFromBEToTemp(string deviceID, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@DeviceID", deviceID),
+            };
+            return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Transfer Assets From BE To Device
+
+        public static DataSet TransferAssetsFromBEToDeviceOffline(string deviceID, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@DeviceID", deviceID),
+            };
+            return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Export Data From Device to BE
+
+        public static DataTable InsertExportedData(DataTable AuditDT, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@auditListToData", AuditDT),
+                new SqlParameter ("@add", 1),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        public static DataTable AnonymousAssetsCount(string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            { };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        public static DataTable InsertAnonymousExportedData(DataTable AnonymousDT, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@anonymousListToData", AnonymousDT),
+                new SqlParameter ("@add", 1),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        public static DataTable InsertAssetStatusExportedData(DataTable AssetStatusDT, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@assetStatusListToData", AssetStatusDT),
+                new SqlParameter ("@add", 1),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Delete Ast Logic
+
+        public static DataTable DeleteAst(DelAst delAst, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@Barcode", delAst.Barcode),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
         #region Get All Assets
 
         public static DataTable GetAllAssets(string StoreProcedure)

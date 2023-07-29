@@ -120,12 +120,23 @@ namespace ZulAssetsBackEnd_API.DAL
                 arr = LicKey.Split("-");
                 substringSerialNo = SerialNo.Substring(4);
                 encryptValue = Encrypt("ABTAK56", substringSerialNo, 1);
+                arr[3] = arr[3].Replace("*", "-");
+                //int abc123123 = Convert.ToInt32(arr[3].Replace("*", "-"));
                 int abc123123 = Convert.ToInt32(arr[3]);
                 int inte = (int)Convert.ToDouble(abc123123 + 197);
                 string inteCStr = inte.ToString();
-                string inteCtrStrRight = inteCStr.Substring(inteCStr.Length - 2);
-                int Cint123 = Convert.ToInt32(inteCtrStrRight);
-                StartPos = Cint123;
+                if (inteCStr.Length == 1)
+                {
+                    string inteCtrStrRight = inteCStr.Substring(2 - 2);
+                    int Cint123 = Convert.ToInt32(inteCtrStrRight);
+                    StartPos = Cint123;
+                }
+                else
+                {
+                    string inteCtrStrRight = inteCStr.Substring(inteCStr.Length - 2);
+                    int Cint123 = Convert.ToInt32(inteCtrStrRight);
+                    StartPos = Cint123;
+                }
 
                 #region License Key Encrypt Algorithm
 
@@ -269,6 +280,90 @@ namespace ZulAssetsBackEnd_API.DAL
                 }
             }
             return str;
+        }
+
+        public static string GenerateLicKey(string LicKey, string SerialNo)
+        {
+
+            #region Variables
+
+            var substringSerialNo = "";
+            var Key2Validate = new long[4];
+            Int32 StartPos;
+            var encryptValue = "";
+            string[] arr;
+            string NegKey = "";
+            string FinalKey = "";
+
+            #endregion
+
+            try
+            {
+                arr = LicKey.Split("-");
+                substringSerialNo = SerialNo.Substring(4);
+                encryptValue = Encrypt("ABTAK56", substringSerialNo, 1);
+                arr[3] = arr[3].Replace("*", "-");
+                //int abc123123 = Convert.ToInt32(arr[3].Replace("*", "-"));
+                int abc123123 = Convert.ToInt32(arr[3]);
+                int inte = (int)Convert.ToDouble(abc123123 + 197);
+                string inteCStr = inte.ToString();
+                string inteCtrStrRight = inteCStr.Substring(inteCStr.Length - 2);
+                int Cint123 = Convert.ToInt32(inteCtrStrRight);
+                StartPos = Cint123;
+
+                #region License Key Encrypt Algorithm
+
+                #region Key 1
+
+                string leftStr1 = encryptValue.Substring(0, 5);
+                int leftStrInt1 = int.Parse(leftStr1, NumberStyles.HexNumber) / 121;
+                Key2Validate[0] = leftStrInt1;
+
+                #endregion
+
+                #region Key 2
+
+                string MidStr2 = encryptValue.Substring(5, 5);
+                int MidStrInt2 = int.Parse(MidStr2, NumberStyles.HexNumber) / 123;
+                Key2Validate[1] = MidStrInt2;
+
+                #endregion
+
+                #region Key 3
+
+                string MidStr3 = encryptValue.Substring(StartPos - 1, 5);
+                int MidStrInt3 = int.Parse(MidStr3, NumberStyles.HexNumber) / 127;
+                Key2Validate[2] = MidStrInt3;
+
+                #endregion
+
+                #region Key 4
+
+                string RightStr4 = encryptValue.Substring(encryptValue.Length - 2);
+                int RightStrInt4 = int.Parse(RightStr4, NumberStyles.HexNumber);
+                Key2Validate[3] = RightStrInt4;
+
+                string KeyLongToString = Key2Validate[3].ToString();
+                string StartPosStr = StartPos.ToString();
+                string SetStrFunction = SetStr(StartPosStr, 2, "0", "L");
+                string kabeer123 = KeyLongToString + SetStrFunction;
+                int SetStrFunction197GetInt = (int)(Convert.ToInt32(kabeer123) - 197);
+                Key2Validate[3] = SetStrFunction197GetInt;
+
+                #endregion
+
+                NegKey = Key2Validate[3] < 0 ? NegKey = "*" + Math.Abs(Key2Validate[3]) : NegKey = Convert.ToString(Math.Abs(Key2Validate[3]));
+
+                FinalKey = Math.Abs(Key2Validate[0]) + "-" + Math.Abs(Key2Validate[1]) + "-" + Math.Abs(Key2Validate[2]) + "-" + NegKey;
+
+                #endregion
+
+                return FinalKey;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         #endregion

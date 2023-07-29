@@ -37,7 +37,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     if (dt.Columns.Contains("ErrorMessage"))
                     {
                         msg.message = dt.Rows[0]["ErrorMessage"].ToString();
-                        //msg.status = "401";
+                        msg.status = "401";
                         return Ok(msg);
                     }
                     else

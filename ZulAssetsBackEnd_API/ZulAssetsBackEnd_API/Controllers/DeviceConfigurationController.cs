@@ -96,16 +96,16 @@ namespace ZulAssetsBackEnd_API.Controllers
                         bool LicKeyVerify = EncryptDecryptPassword.ValidateKey(dbLicKey, deviceReg.DeviceSerialNo);
                         if (LicKeyVerify)
                         {
-                            msg.message = "License Key Verified";
+                            msg.message = "License key verified";
                             msg.status = "200";
                             return Ok(msg);
                         }
                         else
                         {
-                            msg.message = LicKeyVerify ? "Device Not Registered!" : "Invalid License Key";
+                            msg.message = LicKeyVerify ? "Device not registered!" : "Invalid license key";
                             msg.status = "401";
                             return Ok(msg);
-                            
+
                         }
                     }
 
@@ -117,11 +117,41 @@ namespace ZulAssetsBackEnd_API.Controllers
             }
             catch (Exception ex)
             {
-                msg.status = "401";
                 msg.message = ex.Message;
                 return Ok(msg);
             }
 
+        }
+
+        #endregion
+
+        #region Generate Lic Key
+
+        /// <summary>
+        /// Generate License Key API
+        /// </summary>
+        /// <param name="deviceReg"></param>
+        /// <returns>Returns License Key</returns>
+        [HttpPost("GenerateLicKey")]
+        //[Authorize]
+        public IActionResult GenerateLicKey([FromBody] DeviceReg deviceReg)
+        {
+            Message msg = new Message();
+            try
+            {
+                var dbLicKey = "1300-3994-3868-8509";
+                //var substringSerialNo = deviceReg.DeviceSerialNo.Substring(4);
+                string LicKey = EncryptDecryptPassword.GenerateLicKey(dbLicKey, deviceReg.DeviceSerialNo);
+                //string LicKey = EncryptDecryptPassword.Encrypt2("ABTAK56", substringSerialNo, 2);
+                msg.message = LicKey;
+                msg.status = "200";
+                return Ok(msg);
+            }
+            catch (Exception ex)
+            {
+                msg.message = ex.Message;
+                return Ok(msg);
+            }
         }
 
         #endregion

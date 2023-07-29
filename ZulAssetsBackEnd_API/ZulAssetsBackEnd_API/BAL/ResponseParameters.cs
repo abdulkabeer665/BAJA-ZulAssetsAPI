@@ -76,6 +76,7 @@
         {
             public string Message { get; set; }
             public string Status { get; set; }
+            public Object dt { get; set; }
         }
 
         #endregion

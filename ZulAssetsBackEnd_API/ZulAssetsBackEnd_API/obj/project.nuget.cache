@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QHuLLbaD3ply+SvRwfOZGIy/5xzXIgFFxKoZBkVPJ4P1w6J2GLZweRIdIkkf7/3FDiz2c/gdv1KcyIAGVlDaHg==",
+  "dgSpecHash": "XzVFLLy+0G6reTegAYJrm6VvgPcjBnczx4GvBt5H2Od6jxHsG9Fy4VGk74gVee2Ygn5TKRqh1AoYWT22WC9dpg==",
   "success": true,
-  "projectFilePath": "F:\\Docs_Source Codes_SDKs\\Zultec_KHI_JEDDAH\\ZulAssets\\Source Code\\ZulAssets\\ZulAssets4.0\\ZulAssets4.0\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
+  "projectFilePath": "F:\\Docs_Source Codes_SDKs\\JEDDAH\\Baaja\\API Project 2\\BAJA-ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdul.kabeer\\.nuget\\packages\\mailkit\\3.4.1\\mailkit.3.4.1.nupkg.sha512",
     "C:\\Users\\abdul.kabeer\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.10\\microsoft.aspnetcore.authentication.jwtbearer.6.0.10.nupkg.sha512",
