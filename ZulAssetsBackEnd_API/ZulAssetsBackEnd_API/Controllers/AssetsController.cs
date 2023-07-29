@@ -352,10 +352,6 @@ namespace ZulAssetsBackEnd_API.Controllers
         [Authorize]
         public IActionResult UpdateAssetLocation([FromBody] UpdateAssetLocation updAstLoc)
         {
-            //var logResult1 = GeneralFunctions.CreateAndWriteToFile("Testing Brother ", "Barcodes", updAstLoc.Barcode);
-            //var logResult2 = GeneralFunctions.CreateAndWriteToFile("Testing Brother ", "LocIDs", updAstLoc.LocID);
-            //var logResult3 = GeneralFunctions.CreateAndWriteToFile("Testing Brother ", "Status", updAstLoc.Status);
-            //var logResult4 = GeneralFunctions.CreateAndWriteToFile("Testing Brother ", "Asset Status", updAstLoc.AssetStatus);
             Message msg = new Message();
             DataTable dt = new DataTable();
             UpdateAssetLocationResponse updAstLocRes = new UpdateAssetLocationResponse();
@@ -518,7 +514,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-        #region Export Audit Data To BETemp 
+        #region Export Audit Data To BETemp
 
         /// <summary>
         /// Export Audit Data to BETemp
